@@ -315,7 +315,7 @@ footer {
 }
 @font-face {
   font-family: "Korataki";
-  src: url("./fonts/Korataki/korataki.otf") format("opentype");
+  src: url("../fonts/Korataki/korataki.otf") format("opentype");
 }
 
 .hidden {
