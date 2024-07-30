@@ -78,12 +78,13 @@ a:active {
 
 .logo-header {
   width: 217px;
-  height: 56.38px;
+  height: 56.38px; /* 57.38 */
 }
 .cart-search {
   display: flex;
   gap: 20px;
   padding-left: 131px;
+  position: relative;
 }
 .search-input {
   background: #ffffff;
@@ -151,6 +152,10 @@ a:active {
   position: relative;
   left: 0.4%;
 }
+.search1600 {
+  display: none;
+}
+
 .h2 {
   margin: 0;
   padding-top: 4%;
@@ -384,4 +389,84 @@ footer {
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "slnt" 0;
+}
+
+@media (max-width: 1600px) {
+  .container-nav-bar,
+  .container-header,
+  .container-main {
+    max-width: 1240px;
+  }
+  footer .container-footer {
+    max-width: 1240px;
+    gap: 72px;
+  }
+  .container-nav-bar {
+    gap: 69px;
+  }
+  .container-main {
+    height: 1287px;
+  }
+  nav {
+    padding-left: 165px;
+  }
+  .search-input {
+    display: none;
+  }
+  .search-btn {
+    top: 0px;
+    left: 179px;
+    background: var(--dark);
+    width: 39px;
+    height: 39px;
+    border-radius: 88.64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search1600 {
+    display: inline;
+  }
+  .search1920 {
+    display: none;
+  }
+
+  .cart-search {
+    padding-left: 220px;
+  }
+  .h2 {
+    font-size: 40px !important;
+    line-height: 68.6px !important;
+  }
+  .product-grid {
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 287px);
+  }
+
+  .product-card {
+    width: 287px;
+    height: 516px;
+    position: relative;
+  }
+  .product-card img {
+    width: 287px;
+    height: 428px;
+  }
+  .tooltip {
+    width: 287px;
+    top: 340px;
+  }
+  .logo-footer {
+    width: 220px;
+    height: 57.1px;
+  }
+
+  .services {
+    padding-left: 11px;
+    gap: 16px;
+  }
+  .area4 {
+    padding-left: 66px;
+    padding-top: 0px;
+  }
 }
