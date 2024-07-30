@@ -47,10 +47,11 @@ body {
 
 nav {
   display: flex;
-  gap: 100px;
-  padding-left: 104px;
+  gap: 104px;
+  padding-left: 245px;
   line-height: 16px;
   font-size: 16px;
+  white-space: nowrap;
 }
 nav a {
   color: #231815;
@@ -68,7 +69,6 @@ a:active {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   position: relative;
   left: 0.4%;
 }
@@ -83,6 +83,7 @@ a:active {
 .cart-search {
   display: flex;
   gap: 20px;
+  padding-left: 131px;
 }
 .search-input {
   background: #ffffff;
@@ -117,12 +118,13 @@ a:active {
   line-height: 16px;
   font-size: 16px;
   cursor: pointer;
+  position: relative;
 }
 .cart-count {
   width: 18px;
   height: 18px;
-  top: 24px;
-  left: 1299px;
+  top: 1px;
+  left: 35px;
   border-radius: 100px;
   background: #fff;
   position: absolute;
