@@ -72,9 +72,6 @@ a:active {
   position: relative;
   left: 0.4%;
 }
-.header-title {
-  height: 80px;
-}
 
 .logo-header {
   width: 217px;
@@ -237,8 +234,12 @@ a:active {
   margin: 0 auto;
   position: relative;
   left: 0.4%;
-  display: flex;
-  gap: 110px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "logo address services policy"
+    "captcha contacts services payments";
 }
 footer {
   width: 100%;
@@ -249,14 +250,16 @@ footer {
 .logo-footer {
   width: 242px;
   height: 63.1px;
+  grid-area: logo;
 }
 
 .captcha {
   color: var(--lightgray-text);
   width: 322px;
   height: 84px;
-  padding-top: 51px;
+  grid-area: captcha;
   line-height: 20.8px;
+  padding-top: 20px;
 }
 .policy a {
   color: var(--lightgray-text);
@@ -265,6 +268,11 @@ footer {
 .address {
   width: 245px;
   height: 62px;
+  grid-area: address;
+  padding-left: 15px;
+}
+.contacts {
+  padding-left: 8px;
 }
 .address h3,
 .services h3,
@@ -284,20 +292,22 @@ footer {
   padding-top: 7px;
 }
 .contacts h3 {
-  padding-top: 39px;
-  padding-left: 2px;
+  padding-left: 7px;
+  font-size: 17px;
+  line-height: 17px;
+  padding-top: 6px;
 }
-.contacts p {
-  line-height: 16px;
-  padding-top: 3px;
-  margin-bottom: 23px;
+.contacts p:not(:first-child) {
+  padding-left: 7px;
+  padding-top: 4px;
 }
 
 .services {
   display: flex;
   flex-direction: column;
-  padding-left: 39px;
+  padding-left: 53px;
   gap: 17px;
+  grid-area: services;
 }
 
 .policy {
@@ -306,20 +316,14 @@ footer {
   text-align: right;
   white-space: nowrap;
   gap: 23px;
-}
-.area4 {
-  padding-left: 84px;
-  padding-top: 3px;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
+  grid-area: policy;
 }
 .payments {
-  padding-left: 23px;
+  grid-area: payments;
+  justify-self: right;
+  padding-top: 41px;
 }
-.footer-link {
-  text-decoration: none;
-}
+
 @font-face {
   font-family: "Korataki";
   src: url("../fonts/Korataki/korataki.otf") format("opentype");
@@ -390,14 +394,16 @@ footer {
   font-style: normal;
   font-variation-settings: "slnt" 0;
 }
-
+.burger {
+  display: none;
+}
 @media (max-width: 1600px) {
   .container-nav-bar,
   .container-header,
   .container-main {
     max-width: 1240px;
   }
-  footer .container-footer {
+  .container-footer {
     max-width: 1240px;
     gap: 72px;
   }
@@ -435,8 +441,8 @@ footer {
     padding-left: 220px;
   }
   .h2 {
-    font-size: 40px !important;
-    line-height: 68.6px !important;
+    font-size: 40px;
+    line-height: 68.6px;
   }
   .product-grid {
     grid-gap: 30px;
@@ -456,6 +462,89 @@ footer {
     width: 287px;
     top: 340px;
   }
+  /* переделать на грид */
+  .logo-footer {
+    width: 220px;
+    height: 57.1px;
+  }
+
+  .services {
+    padding-left: 11px;
+    gap: 16px;
+  }
+  .area4 {
+    padding-left: 66px;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
+
+  .container-nav-bar,
+  .container-header,
+  .container-main {
+    max-width: 680px;
+  }
+
+  .container-header {
+    height: 60px;
+    justify-content: space-between;
+  }
+
+  .logo-header {
+    width: 145.32px;
+    height: 37px;
+    padding-left: 6px;
+  }
+  nav,
+  .cart-search {
+    display: none;
+  }
+  .burger {
+    display: inline;
+    width: 35px;
+    height: 24px;
+  }
+  .container-footer {
+    max-width: 680px;
+    gap: 72px;
+    height: 521px;
+  }
+
+  .container-main {
+    height: 2595px;
+  }
+
+  .h2 {
+    font-size: 32px;
+    line-height: 44.8px;
+    padding-top: 7%;
+    padding-left: 4px;
+  }
+  .product-grid {
+    grid-gap: 50px 40px;
+    grid-template-columns: repeat(2, 320px);
+    padding-top: 6.2%;
+    padding-left: 1px;
+  }
+
+  .product-card {
+    width: 320px;
+    height: 565px;
+    position: relative;
+  }
+  .product-card img {
+    width: 320px;
+    height: 477px;
+  }
+  .tooltip {
+    width: 320px;
+    top: 389px;
+  }
+  /* переделать на грид */
   .logo-footer {
     width: 220px;
     height: 57.1px;
