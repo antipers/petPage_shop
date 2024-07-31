@@ -236,7 +236,7 @@ a:active {
   left: 0.4%;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, 96px);
   grid-template-areas:
     "logo address services policy"
     "captcha contacts services payments";
@@ -323,6 +323,10 @@ footer {
   justify-self: right;
   padding-top: 41px;
 }
+.hidden_text {
+  grid-area: policy;
+  display: none;
+}
 
 @font-face {
   font-family: "Korataki";
@@ -403,15 +407,13 @@ footer {
   .container-main {
     max-width: 1240px;
   }
-  .container-footer {
-    max-width: 1240px;
-    gap: 72px;
-  }
+
   .container-nav-bar {
     gap: 69px;
   }
   .container-main {
-    height: 1287px;
+    height: 1285px;
+    left: 9px;
   }
   nav {
     padding-left: 165px;
@@ -447,6 +449,7 @@ footer {
   .product-grid {
     grid-gap: 30px;
     grid-template-columns: repeat(4, 287px);
+    padding-top: 3%;
   }
 
   .product-card {
@@ -460,21 +463,29 @@ footer {
   }
   .tooltip {
     width: 287px;
-    top: 340px;
+    top: 341px;
   }
-  /* переделать на грид */
+  .container-footer {
+    max-width: 1240px;
+  }
   .logo-footer {
     width: 220px;
-    height: 57.1px;
+    height: 60.1px;
+  }
+
+  .captcha {
+    padding-left: 2px;
+  }
+  .address {
+    padding-left: 8px;
   }
 
   .services {
     padding-left: 11px;
     gap: 16px;
   }
-  .area4 {
-    padding-left: 66px;
-    padding-top: 0px;
+  .contacts {
+    padding: 0;
   }
 }
 
@@ -516,6 +527,7 @@ footer {
 
   .container-main {
     height: 2595px;
+    left: 5px;
   }
 
   .h2 {
@@ -528,7 +540,7 @@ footer {
     grid-gap: 50px 40px;
     grid-template-columns: repeat(2, 320px);
     padding-top: 6.2%;
-    padding-left: 1px;
+    padding-left: 3px;
   }
 
   .product-card {
@@ -544,18 +556,55 @@ footer {
     width: 320px;
     top: 389px;
   }
-  /* переделать на грид */
+  footer {
+    padding-top: 1px;
+  }
+  .container-footer {
+    max-width: 680px;
+    height: 521px;
+    gap: 1px;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(4, 120px);
+    grid-template-areas:
+      "logo . ."
+      "address contacts services"
+      "policy . services"
+      "payments captcha captcha";
+  }
+
   .logo-footer {
-    width: 220px;
-    height: 57.1px;
+    width: 185px;
+    height: 141.1px;
+    padding-top: 5px;
+    padding-left: 4px;
+  }
+  .address {
+    padding-left: 6px;
+    padding-top: 9px;
+  }
+  .policy {
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 6px;
+  }
+  .payments {
+    justify-self: left;
+    padding-left: 5px;
+    padding-top: 60px;
+  }
+  .contacts {
+    padding-top: 124px;
   }
 
   .services {
-    padding-left: 11px;
-    gap: 16px;
+    justify-content: right;
+    gap: 25px;
+    padding-left: 42px;
+    padding-top: 8px;
   }
-  .area4 {
-    padding-left: 66px;
-    padding-top: 0px;
+  .captcha {
+    padding-top: 44px;
+    padding-left: 53px;
+    width: 439px;
   }
 }
