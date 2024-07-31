@@ -608,3 +608,141 @@ footer {
     width: 439px;
   }
 }
+
+@media (max-width: 390px) {
+  .container-nav-bar,
+  .container-header,
+  .container-main {
+    max-width: 320px;
+  }
+
+  .container-header {
+    height: 56px;
+  }
+
+  .logo-header {
+    width: 148.32px;
+    height: 37px;
+  }
+
+  .burger {
+    width: 33px;
+  }
+
+  .container-main {
+    height: 1542px;
+  }
+
+  .h2 {
+    font-size: 24px;
+    line-height: 33.6px;
+    padding-top: 12%;
+  }
+  .product-grid {
+    grid-gap: 30px 10px;
+    grid-template-columns: repeat(2, 155px);
+    padding-top: 8.2%;
+  }
+
+  .product-card {
+    width: 155px;
+    height: 320px;
+  }
+  .product-card img {
+    width: 155px;
+    height: 230px;
+    border-radius: 12px;
+  }
+  .product-description {
+    line-height: 22.4px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 6px;
+  }
+  .lato-accent {
+    line-height: 21.8px;
+    font-size: 16px;
+  }
+  .lato-old-price {
+    line-height: 22.8px;
+    font-size: 16px;
+  }
+  .lato-common-price {
+    line-height: 22.8px;
+    font-size: 16px;
+  }
+  .sales-tab {
+    width: 71px;
+    height: 23px;
+    font-weight: 400;
+  }
+  .tooltip {
+    display: none;
+  }
+
+  footer {
+    padding-top: 1px;
+  }
+  .container-footer {
+    max-width: 390px;
+    height: 867px;
+    gap: 1px;
+    grid-template-columns: repeat(1, 320px);
+    grid-template-rows: 90px 80px 110px 250px 100px 100px 100px;
+    grid-template-areas:
+      "logo"
+      "address"
+      "contacts"
+      "services"
+      "policy"
+      "payments"
+      "captcha";
+  }
+
+  .logo-footer {
+    width: 217px;
+    height: 122.1px;
+    padding-left: 38px;
+  }
+  .address {
+    padding-left: 33px;
+    padding-top: 31px;
+  }
+  .address p {
+    padding-top: 12px;
+    margin-top: 0px;
+  }
+  .address h3 {
+    font-size: 17px;
+    line-height: 16px;
+    margin: 0;
+  }
+  .contacts {
+    padding-left: 27px;
+    padding-top: 25px;
+  }
+  .contacts p:not(:first-child) {
+    padding-left: 7px;
+    padding-top: 7px;
+    margin-top: 0px;
+  }
+  .policy {
+    padding-top: 12px;
+    padding-left: 34px;
+  }
+  .payments {
+    padding-left: 34px;
+    padding-top: 46px;
+  }
+
+  .services {
+    gap: 17px;
+    padding-left: 34px;
+    padding-top: 35px;
+  }
+  .captcha {
+    padding-top: 7px;
+    padding-left: 33px;
+    width: 386px;
+  }
+}
